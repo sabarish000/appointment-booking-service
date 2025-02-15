@@ -41,21 +41,21 @@ This service provides functionality to query appointment slots for customers wit
    ```
     - Once the Docker container is up and running, ensure you can connect to it using your favorite DB query tool (e.g., DBeaver or pgAdmin). The default connection string is: `postgres://postgres:mypassword123!@localhost:5432/coding-challenge`
     - If you want to use a local database installation instead, you can also get the init.sql file and run it in your local database.
-2. Configure the database:
+3. Configure the database:
     - Update the `src/main/resources/application.properties` file with your PostgreSQL database credentials.
 
-3. Build the project:
+4. Build the project:
     ```sh
     mvn clean install
     ```
 
-4. Run the application:
+5. Run the application:
     ```sh
     mvn spring-boot:run
     ```
-5. The application will be accessible at `http://localhost:3000`.
-6. The application will automatically create the necessary tables and insert initial data on startup. 
-7. Setup tests
+6. The application will be accessible at `http://localhost:3000`.
+7. The application will automatically create the necessary tables and insert initial data on startup. 
+8. Setup tests
    - Run the following commands in the test-app folder. This requires
    that you have node installed on your local environment
    ```
@@ -63,6 +63,8 @@ This service provides functionality to query appointment slots for customers wit
        npm run test
    ```
     - All tests should pass if the setup was successful.
+    - You can test the API using Postman or any other API testing tool.
+    - Swagger UI is also available at http://localhost:3000/swagger-ui.html.
 ### API Endpoints
 
 - **Query Available Slots**
